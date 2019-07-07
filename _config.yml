@@ -1,0 +1,8 @@
+exclude: [.idea,node_modules,bundle.js,package.json,package-lock.json]
+
+highlighter: Rouge
+github: https://github.com/Shuttle/shuttle-chronicle
+name: shuttle-chronicle
+title: Shuttle.Chronicle
+email: me@ebenroux.com
+author: Eben Roux

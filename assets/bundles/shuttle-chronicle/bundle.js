@@ -20,8 +20,8 @@
 		"11": 16,
 		"12": 16,
 		"13": 17,
-		"14": 16,
-		"15": 17
+		"14": 17,
+		"15": 16
 	};
 	global.steal.plugins = { "17": 5 };
 	global.steal.sharedBundles = {};
@@ -67,7 +67,7 @@
 	stealRequire(2);
 })([
 	[
-		14,
+		15,
 		function(stealRequire, stealExports, stealModule) {
 			(function(global, factory) {
 				"use strict";
@@ -9750,7 +9750,7 @@
 	[
 		12,
 		function(stealRequire, stealExports, stealModule) {
-			stealRequire(14);
+			stealRequire(15);
 			stealRequire(10);
 			(function(global, factory) {
 				typeof exports === "object" && typeof module !== "undefined"
@@ -17074,6 +17074,7 @@
 					});
 			};
 			$(function() {
+				$("table").addClass("table table-striped");
 				$("#search-button").on("click", function(e) {
 					e.preventDefault();
 					if (!$("#search").val()) {
@@ -17299,14 +17300,14 @@
 		2,
 		/*shuttle-chronicle@1.0.0#bundle*/
 		function(stealRequire) {
-			stealRequire(14);
+			stealRequire(15);
 			stealRequire(10);
 			stealRequire(12);
 			stealRequire(11);
 			stealRequire(6);
 			stealRequire(3);
 			stealRequire(4);
-			stealRequire(15);
+			stealRequire(14);
 			stealRequire(7);
 			stealRequire(8);
 			stealRequire(9);

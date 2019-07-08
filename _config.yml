@@ -1,6 +1,6 @@
 exclude: [.idea,node_modules,bundle.js,package.json,package-lock.json]
 
-highlighter: Rouge
+highlighter: rouge
 github: https://github.com/Shuttle/shuttle-chronicle
 name: shuttle-chronicle
 title: Shuttle.Chronicle

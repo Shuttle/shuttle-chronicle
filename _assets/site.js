@@ -1,4 +1,4 @@
-decode = function(input){
+decode = function (input) {
     var e = document.createElement('div');
     e.innerHTML = decodeURIComponent(input);
     return e.childNodes[0].nodeValue.replace(/\<\s*br\s*\/\>/g, '\n');
@@ -13,19 +13,19 @@ performSearch = function (version) {
         url: baseurl + '/content.json?' + version,
         dataType: 'json'
     })
-        .done(function(data){
+        .done(function (data) {
             window.searchData = data;
 
             idx = lunr(function () {
                 var self = this;
 
                 this.ref('id');
-                this.field('title', {boost: 10});
+                this.field('title', { boost: 10 });
                 this.field('url');
                 this.field('content');
 
                 $.each(data, function (index, entry) {
-                    self.add($.extend({"id": index}, entry))
+                    self.add($.extend({ "id": index }, entry))
                 });
             });
 
@@ -40,7 +40,7 @@ performSearch = function (version) {
 
                 entry = window.searchData[result.ref];
 
-                if (!entry.title){
+                if (!entry.title) {
                     return;
                 }
 
@@ -49,14 +49,16 @@ performSearch = function (version) {
                 headerIndex += 1;
             });
 
-            $('#search-results-container .card-header a').on('click', function(e) { e.stopPropagation(); });
+            $('#search-results-container .card-header a').on('click', function (e) { e.stopPropagation(); });
         })
-        .fail(function( jqXHR, textStatus, errorThrown){
+        .fail(function (jqXHR, textStatus, errorThrown) {
             $('#search-results-container').html('<p class="alert-danger">' + errorThrown + '</p>');
         });
 }
 
 $(function () {
+    $('table').addClass('table table-striped');
+
     $('#search-button').on('click', function (e) {
         e.preventDefault()
 
